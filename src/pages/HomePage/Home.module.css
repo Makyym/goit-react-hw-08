@@ -1,0 +1,10 @@
+.title {
+    margin-bottom: 50px;
+}
+
+.list {
+    justify-content: center;
+    display: flex;
+    gap: 20px 30px;
+    margin-bottom: 50px;
+}

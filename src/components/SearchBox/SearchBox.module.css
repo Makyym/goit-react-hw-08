@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 30px;
+    & input {
+        border: 1px solid #004e3f;
+        border-radius: 50px;
+        padding: 15px 60px;
+        width: 400px;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25), inset 0 10px 25px 0 rgba(36, 155, 87, 0.1);
+        background: linear-gradient(135deg, #27664b 0%, #22523e 9.5%, #19362a 29.1%, #030c07 92.09%);
+        outline: none;
+        color: #7ea18a;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    & input:hover,
+    input:focus {
+        box-shadow: 0 0 20px rgb(4, 91, 39);
+    }
+    & label {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+        background: linear-gradient(180deg, #f0fff5 0%, #d2eedc 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 5px;
+    }
+}
