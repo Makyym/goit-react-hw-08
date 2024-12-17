@@ -1,4 +1,5 @@
 .wrapper {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -8,7 +9,6 @@
         border-radius: 50px;
         padding: 15px 60px;
         width: 400px;
-        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25), inset 0 10px 25px 0 rgba(36, 155, 87, 0.1);
         background: linear-gradient(135deg, #27664b 0%, #22523e 9.5%, #19362a 29.1%, #030c07 92.09%);
         outline: none;
         color: #7ea18a;

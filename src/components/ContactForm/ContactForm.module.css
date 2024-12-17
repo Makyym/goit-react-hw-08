@@ -25,7 +25,6 @@
     & button {
         margin-top: auto;
     };
-    margin-bottom: 30px;
 }
 
 .input {
@@ -47,6 +46,11 @@
     font-size: 16px;
     line-height: 1;
     color: #7ea18a;
+}
+
+.input:hover,
+.input:focus {
+    box-shadow: 0 0 20px #007412;
 }
 
 .label {
