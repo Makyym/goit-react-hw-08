@@ -7,8 +7,8 @@ import s from "../ContactForm/ContactForm.module.css"
 import { editContact } from "../../redux/contacts/operations";
 
 
-const EditContactForm = ({ data, id, close }) => {
-    const { name, number } = data;
+const EditContactForm = ({ data, close }) => {
+    const { name, number, id } = data;
     const initialValues = {
         name,
         number

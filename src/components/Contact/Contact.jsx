@@ -5,7 +5,7 @@ import { useState } from "react";
 import ImageModal from "../ImageModal/ImageModal";
 import EditContactForm from "../EditContactForm/EditContactForm";
 
-const Contact = ({ data, contactId }) => {
+const Contact = ({ data }) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [secondModalIsOpen, setSecondModalIsOpen] = useState(false);
     const openSecondModal = () => {
@@ -22,11 +22,11 @@ const Contact = ({ data, contactId }) => {
     };
 
     const dispatch = useDispatch();
-    const { name, number } = data;
+    const { name, number, contactId} = data;
     return (
         <div className={s.item}>
             <ImageModal isOpen={modalIsOpen} onRequestClose={closeModal}>
-                <EditContactForm data={data} id={contactId} close={closeModal}/>
+                <EditContactForm data={data} close={closeModal}/>
             </ImageModal>
             <ImageModal isOpen={secondModalIsOpen} onRequestClose={closeSecondModal}>
                 <div className={s.modal}>
