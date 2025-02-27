@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import s from "./NotFoundPage.module.css"
+import s from "./NotFoundPage.module.css";
+import astronaut from "../../img/astronaut.png";
 
 const NotFoundPage = () => {
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ const NotFoundPage = () => {
                 {`Sorry, but it looks like this page doesn't exist!`}<br />
                 {`You will be redirected to the homepage in ${counter} seconds...`}
             </p>
-            <div className={s.div}><img className={s.img} src="/src/img/astronaut.png" alt="flying cosmonaut" /></div>
+            <div className={s.div}><img className={s.img} src={astronaut} alt="flying cosmonaut" /></div>
         </div>);
 };
 
