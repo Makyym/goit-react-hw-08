@@ -1,15 +1,14 @@
 .form {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
     padding: 30px 25px;
-    padding-left: 0;
     width: 350px;
-    height: 300px;
+    height: 200px;
     min-width: 350px;
-    background-color: transparent;
+    background-color: var(--dark-navi);
     backdrop-filter: blur(120px);
     position: relative;
     & span {
@@ -25,7 +24,7 @@
             margin-right: 5px;
         };
         & button {
-            margin-top: 20px;
+            margin-top: auto;
             border-radius: 5px;
             padding: 12px 10px;
             width: 300px;

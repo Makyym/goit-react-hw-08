@@ -1,10 +1,50 @@
+.div {
+    margin-top: 80px;
+}
+
 .title {
-    margin-bottom: 50px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    color: var(--pure-white);
+    opacity: 0.7;
+    margin: 0;
+    padding: 10px;
 }
 
 .list {
     justify-content: center;
     display: flex;
-    gap: 20px 30px;
-    margin-bottom: 50px;
+    gap: 40px;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--pure-white);
+    opacity: 0.7;
+    & h3 {margin: 0;}
+    & p {margin: 0;}
+}
+
+.ellipse {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: var(--light-purple);
+    filter: blur(150px);
+    position: absolute;
+}
+
+.ellipse2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: var(--light-purple);
+    position: absolute;
+    filter: blur(220px);
+    right: 0;
 }

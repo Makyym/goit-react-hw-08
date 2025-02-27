@@ -16,10 +16,15 @@ const LoginForm = () => {
             .then(res => {
                 toast.success(`Welcome, ${res.user.name}!`, {
                     style: {
-                        border: '1px solid #1c3023',
+                        border: '1px solid #646cff',
                         padding: '16px',
-                        color: '#7ea18a',
-                        backgroundColor: 'rgba(28, 48, 35, 1)'
+                        color: 'white',
+                        backgroundColor: '#1a1a1a',
+                        opacity: '0.8',
+                    },
+                    iconTheme: {
+                        primary: '#646cff',
+                        secondary: 'white'
                     }});
                 navigate('/contacts');
             }).catch(() => {
@@ -31,17 +36,24 @@ const LoginForm = () => {
         "email": "",
         "password": ""
     };
-
     if (isLoggedIn) {
         return <Navigate to='/contacts'/>
     }
     return (
         <Formik onSubmit={handleSubmit} initialValues={initialValues}>
-            <Form className={s.form}>
-                <Field className={s.input} name='email' placeholder='Enter email' />
-                <Field className={s.input} name='password' type='password' placeholder='Enter pass' />
-                <button type="submit">Log in</button>
-            </Form>
+            <div className={s.relative}>
+                <Form className={s.form}>
+                    <div>
+                        <h2>Log in to your account to start using the application.</h2>
+                        <h3>{`If you don't have an account yet, click the 'Register' link.`}</h3>
+                        <Field className={s.input} name='email' placeholder='Enter email' />
+                        <Field className={s.input} name='password' type='password' placeholder='Enter pass' />
+                        <button type="submit">Log in</button>
+                    </div>
+                </Form>
+                <div className={s.ellipse}></div>
+                <div className={s.ellipse2}></div>
+            </div>
         </Formik>
     )
 };

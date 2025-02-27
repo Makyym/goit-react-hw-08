@@ -10,6 +10,7 @@ const SearchBox = () => {
         <div className={s.wrapper}>
             <label htmlFor={searchId}>Find contacts by name</label>
             <input type="text" id={searchId} name="searchValue" onChange={(e) => dispatch(changeFilter(e.target.value))}/>
+            <div className={s.ellipse2}></div>
         </div>
     )
 }

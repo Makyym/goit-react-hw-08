@@ -4,6 +4,7 @@ import { deleteContact } from "../../redux/contacts/operations"
 import { useState } from "react";
 import ImageModal from "../ImageModal/ImageModal";
 import EditContactForm from "../EditContactForm/EditContactForm";
+import { IoMdContact } from "react-icons/io";
 
 const Contact = ({ data }) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -33,7 +34,8 @@ const Contact = ({ data }) => {
                     <p className={s.p}>Confirm deletion of a contact by clicking here</p>
                     <button onClick={() => dispatch(deleteContact(contactId))}>Click</button>
                 </div>
-                </ImageModal>
+            </ImageModal>
+            <IoMdContact />
             <div className={s.text}>
                 <p>{name}</p>
                 <p>{number}</p>

@@ -6,10 +6,19 @@
 .active {
     font-size: 28px;
     text-decoration: underline;
+    background: linear-gradient(90deg, #763AF5 48%, #A604F2 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.active:hover {
+    text-shadow: none;
 }
 
 .link {
-    color: #c0e4cd;
+    color: var(--pure-white);
     font-size: 24px;
     font-weight: bold;
 }
@@ -17,6 +26,10 @@
 .link:hover {
     text-shadow: 0 0 10px white;
     color: rgb(255, 255, 255);
+}
+
+.active:hover {
+    text-shadow: none;
 }
 
 .nav {

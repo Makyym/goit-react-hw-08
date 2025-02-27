@@ -32,12 +32,20 @@ const RegistrationForm = () => {
     };
     return (
         <Formik onSubmit={handleSubmit} initialValues={initialValues}>
-            <Form className={s.form}>
-                <Field className={s.input} name='name' placeholder='Enter name' />
-                <Field className={s.input} name='email' placeholder='Enter email' />
-                <Field className={s.input} name='password' type='password' placeholder='Enter pass' />
-                <button type="submit">Submit</button>
-            </Form>
+            <div className={s.relative}>
+                <Form className={s.form}>
+                    <div>
+                        <h2>Create an account to start using the application.</h2>
+                        <h3>{`If you already have an account, click the 'Log In' link.`}</h3>
+                        <Field className={s.input} name='name' placeholder='Enter name' />
+                        <Field className={s.input} name='email' placeholder='Enter email' />
+                        <Field className={s.input} name='password' type='password' placeholder='Enter pass' />
+                        <button type="submit">Submit</button>
+                    </div>
+                </Form>
+                <div className={s.ellipse}></div>
+                <div className={s.ellipse2}></div>
+            </div>
         </Formik>
     )
 };

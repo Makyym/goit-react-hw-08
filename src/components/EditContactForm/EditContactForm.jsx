@@ -3,9 +3,8 @@ import { useId } from "react";
 import * as Yup from "yup";
 import { ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
-import s from "../ContactForm/ContactForm.module.css"
+import s from "./EditContactFrom.module.css"
 import { editContact } from "../../redux/contacts/operations";
-
 
 const EditContactForm = ({ data, close }) => {
     const { name, number, id } = data;
