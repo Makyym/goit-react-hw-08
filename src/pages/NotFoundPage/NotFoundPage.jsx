@@ -25,7 +25,7 @@ const NotFoundPage = () => {
                 {`Sorry, but it looks like this page doesn't exist!`}<br />
                 {`You will be redirected to the homepage in ${counter} seconds...`}
             </p>
-            <div className={s.div}><img className={s.img} src='/src/img/vecteezy_astronaut-spaceman-in-suit-isolated-on-transparent_33544615.png' alt="flying cosmonaut" /></div>
+            <div className={s.div}><img className={s.img} src="/src/img/vecteezy_astronaut-spaceman-in-suit-isolated-on-transparent_33544615.png" alt="flying cosmonaut" /></div>
         </div>);
 };
 
