@@ -25,7 +25,7 @@ function App() {
     display: "flex",
     justifyContent: "center",
   };
-  return isRefreshing ? <ThreeDots wrapperStyle={styles} /> : (
+  return isRefreshing ? <ThreeDots wrapperStyle={styles} color='#763AF5'/> : (
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />

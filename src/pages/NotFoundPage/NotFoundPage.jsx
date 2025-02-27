@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import s from "./NotFoundPage.module.css"
 
-const gif = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHI5OHM1dDdlbWhoemlzdGVjbzVyMWI3Z2V4dXJpejkzNGk0YTYzMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TlMkUTNkfC7aAbIoZE/giphy.gif";
-
 const NotFoundPage = () => {
     const navigate = useNavigate();
     const [counter, setCounter] = useState(10);
@@ -27,7 +25,7 @@ const NotFoundPage = () => {
                 {`Sorry, but it looks like this page doesn't exist!`}<br />
                 {`You will be redirected to the homepage in ${counter} seconds...`}
             </p>
-            <img className={s.img} src={gif} alt="bye" />
+            <div className={s.div}><img className={s.img} src='/src/img/vecteezy_astronaut-spaceman-in-suit-isolated-on-transparent_33544615.png' alt="flying cosmonaut" /></div>
         </div>);
 };
 

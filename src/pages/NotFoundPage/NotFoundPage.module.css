@@ -1,7 +1,23 @@
 .text {
     font-size: 30px;
+    background: linear-gradient(90deg, #FFFFFF 25%, #763AF5 66%, #A604F2 99%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .img {
-    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    height: 550px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 0 #763af5, 4px 2px 4px #a604f2;
 }
