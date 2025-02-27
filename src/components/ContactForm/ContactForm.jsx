@@ -30,12 +30,13 @@ const ContactForm = () => {
         >
             <Form className={s.form}>
                 <label htmlFor={nameFieldId} className={s.label}>Name</label>
-                <Field className={s.input} type="text" name="name" id={nameFieldId} />
+                <Field className={s.input} type="text" name="name" id={nameFieldId} placeholder="enter a contact name"/>
                 <ErrorMessage name="name" component="span"/>
                 <label htmlFor="phoneFieldId" className={s.label}>Number</label>
-                <Field className={s.input} type="text" name="number" id={phoneFieldId} />
+                <Field className={s.input} type="text" name="number" id={phoneFieldId} placeholder="enter a contact number"/>
                 <ErrorMessage name="number" component="span"/>
                 <button type="submit">Add contact</button>
+                <div className={s.ellipse}></div>
             </Form>
         </Formik>
     )

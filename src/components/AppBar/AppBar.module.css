@@ -2,21 +2,46 @@
     display: flex;
     align-items: baseline;
     padding: 10px;
-    padding-bottom: 40px;
-    background-image: url('../../img/decor2.png');
     background-size: 200px;
     background-repeat:repeat-x;
     background-position: bottom;
 }
 
 .title {
-    color: white;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--pure-white);
     font-size: 48px;
     margin: 0;
-    font-weight: 700;
     line-height: 1;
-    background: linear-gradient(180deg, #d8fee5 0%, #c0e4cd 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: relative;
+    & .colorText {
+        background: linear-gradient(90deg, #FFFFFF 0%, #763AF5 48%, #A604F2 99%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.image {
+    width: 145px;
+    height: 145px;
+    background-image: url('/src/img/f9610aa1-27ff-4cb0-be70-f1f3fb2dced2-1.png');
+    background-size: contain;
+    animation: rotate 30s linear infinite;
+    transform-origin: center;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: -100%;
+    left: -35%;
+    z-index: -999;
+    border-radius: 100%;
+    /* box-shadow: 2px 2px 0 #763af5, 4px 2px 0 #a604f2; */
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }

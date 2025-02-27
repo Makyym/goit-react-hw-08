@@ -9,11 +9,10 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        background: 'linear-gradient(144deg,rgb(13, 83, 44) 0%,rgb(8, 59, 31) 100%)',
-        border: '1px solid rgba(2, 107, 86, 1)',
+        border: '1px solid #646cff',
         borderRadius: '24px',
         padding: '0',
-        boxShadow: '0 0 20px rgb(4, 91, 39)',
+        boxShadow: '0 6px 20px rgba(100, 108, 255, 0.3), 0 6px 20px rgba(100, 108, 255, 0.2)',
     },
     overlay: {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
