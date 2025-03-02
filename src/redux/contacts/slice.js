@@ -54,7 +54,7 @@ const slice = createSlice({
             .addCase(editContact.fulfilled, (state, { payload }) => {
                 const contact = state.contacts.items.find(contact => contact.id === payload.id);
                 contact.name = payload.name;
-                contact.phoneNumber = payload.number;
+                contact.number = payload.number;
             })
     }
 });
