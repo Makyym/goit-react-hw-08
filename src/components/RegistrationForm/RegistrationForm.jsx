@@ -12,18 +12,18 @@ const RegistrationForm = () => {
         dispatch(register(values))
             .unwrap()
             .then(res => {
-                toast.success(`Account "${res.data.name}" successfully created, please use it to log in.`, {
-                    duration: 8000,
+                toast.success(`Welcome, ${res.user.name}!`, {
+                    duration: 3000,
                     style: {
                         border: '1px solid #646cff',
                         padding: '16px',
                         color: 'white',
                         backgroundColor: '#1a1a1a',
-                        fontSize: '20px',
+                        fontSize: '16px',
                         fontWeight: '700',
                     },
                     icon: null});
-                navigate('/login');
+                navigate('/contacts');
             }).catch(() => {
                 toast.error('Something went wrong... Please try again!')
             });

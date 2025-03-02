@@ -23,7 +23,7 @@ const Contact = ({ data }) => {
     };
 
     const dispatch = useDispatch();
-    const { name, phoneNumber, _id, contactType} = data;
+    const { name, number, id} = data;
     return (
         <div className={s.item}>
             <ImageModal isOpen={modalIsOpen} onRequestClose={closeModal}>
@@ -32,14 +32,13 @@ const Contact = ({ data }) => {
             <ImageModal isOpen={secondModalIsOpen} onRequestClose={closeSecondModal}>
                 <div className={s.modal}>
                     <p className={s.p}>Confirm deletion of a contact by clicking here</p>
-                    <button onClick={() => dispatch(deleteContact(_id))}>Click</button>
+                    <button onClick={() => dispatch(deleteContact(id))}>Click</button>
                 </div>
             </ImageModal>
             <IoMdContact />
             <div className={s.text}>
                 <p>{name}</p>
-                <p>{phoneNumber}</p>
-                <p>Type: {contactType}</p>
+                <p>{number}</p>
             </div>
             <div className={s.div}>
                 <button onClick={() => openModal()}>Edit</button>

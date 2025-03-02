@@ -109,28 +109,3 @@
 .select:focus {
     box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3), 0 6px 20px rgba(100, 108, 255, 0.2);
 }
-
-.div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.marginWithout {
-    position: absolute;
-    bottom: -25%;
-    transition: bottom 0.5s ease;
-}
-
-.margin {
-    position: absolute;
-    bottom: -56%;
-    transition: bottom 0.5s ease;
-}
-
-.wrapper {
-    margin: 0;
-    padding: 0;
-    position: relative;
-}

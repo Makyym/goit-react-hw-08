@@ -14,7 +14,7 @@ const LoginForm = () => {
         dispatch(login(values))
             .unwrap()
             .then(res => {
-                toast.success(`Welcome, ${res.name}!`, {
+                toast.success(`Welcome, ${res.user.name}!`, {
                     style: {
                         border: '1px solid #646cff',
                         padding: '16px',
