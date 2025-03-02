@@ -12,14 +12,18 @@ const RegistrationForm = () => {
         dispatch(register(values))
             .unwrap()
             .then(res => {
-                toast.success(`Welcome, ${res.user.name}!`, {
+                toast.success(`Account "${res.data.name}" successfully created, please use it to log in.`, {
+                    duration: 8000,
                     style: {
-                        border: '1px solid #1c3023',
+                        border: '1px solid #646cff',
                         padding: '16px',
-                        color: '#7ea18a',
-                        backgroundColor: 'rgba(28, 48, 35, 1)'
-                    }});
-                navigate('/contacts');
+                        color: 'white',
+                        backgroundColor: '#1a1a1a',
+                        fontSize: '20px',
+                        fontWeight: '700',
+                    },
+                    icon: null});
+                navigate('/login');
             }).catch(() => {
                 toast.error('Something went wrong... Please try again!')
             });

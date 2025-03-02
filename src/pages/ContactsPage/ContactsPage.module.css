@@ -1,3 +1,13 @@
 .div {
+    display: flex;
     padding: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 760px;
+    gap: 20px;
+    margin-left: auto;
+    align-items: center;
 }

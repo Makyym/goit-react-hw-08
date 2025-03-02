@@ -95,3 +95,19 @@
     left: -30%;
     position: absolute;
 }
+
+.select {
+    background-color: var(--dark-navi);
+    border: 1px solid #646cff;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.select:hover,
+.select:focus {
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3), 0 6px 20px rgba(100, 108, 255, 0.2);
+}

@@ -7,8 +7,10 @@ const ContactsPage = () => {
     return (
         <div className={s.div}>
             <ContactForm />
-            <SearchBox />
-            <ContactList />
+            <div className={s.wrapper}>
+                <SearchBox />
+                <ContactList />
+            </div>
         </div>
     );
 };

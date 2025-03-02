@@ -11,9 +11,9 @@ export const clearAuthHeader = () => {
 
 export const register = createAsyncThunk('auth/register', async (credentials, thunkAPI) => {
     try {
-        const response = await axios.post('/users/signup', credentials);
-        setAuthHeader(response.data.token);
-        return response.data;
+        const {data} = await axios.post('/auth/register', credentials);
+        console.log(data);
+        return data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
     }
@@ -21,9 +21,9 @@ export const register = createAsyncThunk('auth/register', async (credentials, th
 
 export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI) => {
     try {
-        const response = await axios.post('/users/login', credentials);
-        setAuthHeader(response.data.token);
-        return response.data;
+        const response = await axios.post('/auth/login', credentials, { withCredentials: true });
+        setAuthHeader(response.data.data.accessToken);
+        return response.data.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
     }
@@ -31,7 +31,7 @@ export const login = createAsyncThunk('auth/login', async (credentials, thunkAPI
 
 export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     try {
-        await axios.post('/users/logout');
+        await axios.post('/auth/logout', {}, {withCredentials: true});
         clearAuthHeader();
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
@@ -39,16 +39,10 @@ export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 });
 
 export const refreshUser = createAsyncThunk('auth/refresh', async (_, thunkAPI) => {
-    const savedToken = thunkAPI.getState().auth.token;
-
-    if (!savedToken) {
-        return thunkAPI.rejectWithValue('Token is not exist');
-    }
-
     try {
-        setAuthHeader(savedToken);
-        const { data } = await axios.get('/users/current');
-        return data;
+        const response = await axios.post('/auth/refresh', {}, { withCredentials: true });
+        setAuthHeader(response.data.data.accessToken);
+        return response.data.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
     };
