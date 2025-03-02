@@ -17,13 +17,25 @@
         box-shadow: 0 0 4px #763af5, 0 0 4px #a604f2;
     }
 }
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--light-purple);
+    box-shadow: 0 0 4px #763af5, 0 0 4px #a604f2;
+    border-radius: 15px;
+    padding: 5px;
+    & svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
 .text {
     margin: 0;
     color: var(--pure-white);
     font-size: 24px;
     font-weight: bold;
-    border: 1px solid var(--light-purple);
-    padding: 5px;
-    border-radius: 15px;
-    box-shadow: 0 0 4px #763af5, 0 0 4px #a604f2;
 }

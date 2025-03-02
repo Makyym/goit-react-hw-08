@@ -1,16 +1,23 @@
 .item {
-    width: 350px;
+    width: 200px;
     padding: 15px;
+    gap: 10px;
     display: flex;
     align-items: center;
-    text-align: left;
+    justify-content: center;
+    flex-direction: column;
     border: 2px solid var(--light-purple);
     border-radius: 24px;
     background-color: transparent;
+    background: linear-gradient(67deg, var(--dark-navi) 15%, #a57bff 20%, var(--dark-navi) 24%, var(--dark-navi) 61%, var(--dark-navi) 69%, var(--dark-navi) 100%);
+    background-size: 300% 300%;
+    animation: gradientShift 5s ease infinite;
     & button {
         color: var(--pure-white);
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 70px;
+        font-weight: 700;
+        font-style: 12px;
         background-image: linear-gradient(90deg, #763af5 0%, #a604f2 100%);
         border: none;
         border-radius: 16px;
@@ -20,11 +27,20 @@
         box-shadow: 0 0 4px #763af5, 0 0 4px #a604f2;
     }
     & svg {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         margin-right: 10px;
         background-image: linear-gradient(90deg, #763af5 0%, #a604f2 100%);
         border-radius: 100%;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: -300px 100%;
+    }
+    100% {
+        background-position: 300px 100%;
     }
 }
 
@@ -32,7 +48,7 @@
     width: 150px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
@@ -40,14 +56,15 @@
     & p {
         margin: 0;
         display: inline-block;
-        word-wrap: break-word;
+    }
+    & p::first-letter {
+        text-transform: uppercase;
     }
 }
 
 .div {
     display: flex;
-    gap: 5px;
-    margin-left: auto;
+    gap: 20px;
 }
 
 .p {

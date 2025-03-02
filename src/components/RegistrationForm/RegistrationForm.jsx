@@ -19,12 +19,16 @@ const RegistrationForm = () => {
             .unwrap()
             .then(res => {
                 toast.success(`Welcome, ${res.user.name}!`, {
+                    duration: 3000,
                     style: {
-                        border: '1px solid #1c3023',
+                        border: '1px solid #646cff',
                         padding: '16px',
-                        color: '#7ea18a',
-                        backgroundColor: 'rgba(28, 48, 35, 1)'
-                    }});
+                        color: 'white',
+                        backgroundColor: '#1a1a1a',
+                        fontSize: '16px',
+                        fontWeight: '700',
+                    },
+                    icon: null});
                 navigate('/contacts');
             }).catch(() => {
                 toast.error('Something went wrong... Please try again!')

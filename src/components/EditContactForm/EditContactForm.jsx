@@ -23,7 +23,7 @@ const EditContactForm = ({ data, close }) => {
         };
     const contactSchema = Yup.object().shape({
         name: Yup.string().min(3, "Too short!").max(50, "Too long!").required("Required"),
-        number: Yup.string().min(3, "Too short!").max(50, "Too long!").required("Required"),
+        number: Yup.string().min(3, "Too short!").max(15, "Too long!").required("Required"),
         });
         return (
             <Formik

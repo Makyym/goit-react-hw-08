@@ -4,14 +4,11 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
-    padding: 30px 25px;
     padding-left: 0;
     width: 350px;
-    height: 300px;
     min-width: 350px;
     background-color: transparent;
     backdrop-filter: blur(120px);
-    position: relative;
     & span {
             font-weight: 300;
             font-size: 16px;
@@ -25,7 +22,6 @@
             margin-right: 5px;
         };
         & button {
-            margin-top: 20px;
             border-radius: 5px;
             padding: 12px 10px;
             width: 300px;
@@ -38,6 +34,7 @@
             outline: none;
             border: none;
             cursor: pointer;
+            transition: bottom 0.5s ease;
         }
         & button:hover {
             box-shadow: 0 0 4px #763af5, 0 0 4px #a604f2;
@@ -95,4 +92,20 @@
     top: 0;
     left: -30%;
     position: absolute;
+}
+
+.select {
+    background-color: var(--dark-navi);
+    border: 1px solid #646cff;
+    border-radius: 16px;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.select:hover,
+.select:focus {
+    box-shadow: 0 6px 20px rgba(100, 108, 255, 0.3), 0 6px 20px rgba(100, 108, 255, 0.2);
 }
