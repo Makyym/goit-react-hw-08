@@ -1,9 +1,8 @@
 .form {
     box-sizing: border-box;
     display: flex;
-    gap: 30px;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 50%;
     padding: 40px;
     width: 1092px;
     height: 576px;
@@ -12,6 +11,7 @@
         padding: 40px;
         width: 506px;
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 14px;
         text-align: left;
