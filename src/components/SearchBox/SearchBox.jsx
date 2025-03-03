@@ -8,7 +8,7 @@ const SearchBox = () => {
     const dispatch = useDispatch();
     return (
         <div className={s.wrapper}>
-            <label htmlFor={searchId}>Find contacts by name</label>
+            <label htmlFor={searchId}>Find contact</label>
             <input type="text" id={searchId} name="searchValue" onChange={(e) => dispatch(changeFilter(e.target.value))}/>
             <div className={s.ellipse2}></div>
         </div>
